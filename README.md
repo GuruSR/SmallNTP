@@ -25,3 +25,18 @@ How to use in your Watchy.
 `SmallNTP sNTP; // Declare NTP object`
 
 Start the NTP process with Begin, then use Query in a loop for say 5 seconds to get the response or a timeout (your 5 seconds pass), if the Query is true, store the results from tmResults into RTC.set.  For TimeZone correction I would recommend including SmallRTC and Olson2POSIX for a complete suite of functionality.
+
+IE:
+
+```
+  sNTP.Begin("pool.ntp.org");
+  int s = 0;
+  bool b = false;
+  while (!b && s < 100){
+    s++;
+    delay(50);
+    b = sNTP.Query();
+  }
+  if (b) RTC.set(sNTP.tmResults);
+  sNTP.End();
+```
