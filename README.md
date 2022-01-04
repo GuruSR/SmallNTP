@@ -15,3 +15,13 @@ Original version corrected from Arduino, which is an industry standard copy of t
  **tmElements_t tmResults** has the results from above in a format to use in either WatchyRTC or SmallRTC (GuruSR).
  
  Neither of the two above variables survive a Deep Sleep, do not rely on them after a Deep Sleep.
+
+How to use in your Watchy.
+
+`#include <SmallNTP.h>`
+
+`...`
+
+`SmallNTP sNTP; // Declare NTP object`
+
+Start the NTP process with Begin, then use Query in a loop for say 5 seconds to get the response or a timeout (your 5 seconds pass), if the Query is true, store the results from tmResults into RTC.set.  For TimeZone correction I would recommend including SmallRTC and Olson2POSIX for a complete suite of functionality.
