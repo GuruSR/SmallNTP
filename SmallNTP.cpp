@@ -5,6 +5,7 @@
  * which has been around for decades.
  * 
  * Version 1.0, January 2, 2022
+ * Version 1.1, January 11, 2022 - Fix internal data.
  *
  * This library offers async NTP, which returns the seconds from Epoch (1970 and beyond) in 2 variations
  * for use with Watchy watch face code.
@@ -58,8 +59,8 @@ bool SmallNTP::Query(){
   if(ntpClient.parsePacket() >= NTP_PACKET_SIZE){
     ntpClient.read(ntpPacketBuffer, NTP_PACKET_SIZE);
     ntpClient.flush();
-    Results = ((uint32_t)ntpPacketBuffer[40] << 24 | (uint32_t)ntpPacketBuffer[41] << 16 | (uint32_t)ntpPacketBuffer[42] << 8 | ntpPacketBuffer[43]) - 2208988800UL;	// 1970 + seconds.
-    breakTime(Results,tmResults);
+    SmallNTP::Results = ((uint32_t)ntpPacketBuffer[40] << 24 | (uint32_t)ntpPacketBuffer[41] << 16 | (uint32_t)ntpPacketBuffer[42] << 8 | ntpPacketBuffer[43]) - 2208988800UL;	// 1970 + seconds.
+    breakTime(SmallNTP::Results,SmallNTP::tmResults);
     return true;
   }
   return false;
