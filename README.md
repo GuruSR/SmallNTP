@@ -14,9 +14,11 @@ Original version corrected from Arduino, which is an industry standard copy of t
  Two variables that are filled when **Query()** returns `true`.
  
  **time_t Results:** has the results of the NTPServer response in `time_t` format, ready for use with `localtime`.
+
  **tmElements_t tmResults** has the results from above in a format to use in either WatchyRTC or SmallRTC (GuruSR).
 
  **time_t Results1900:** has the results of the NTPServer response in `time_t` format since 1900, ready for use with `localtime`.
+
  **tmElements_t tmResults1900** has the results from above in a format to use in either WatchyRTC or SmallRTC (GuruSR).
  
  None of the four above variables survive a Deep Sleep, do not rely on them after a Deep Sleep.
