@@ -11,7 +11,7 @@ Original version corrected from Arduino, which is an industry standard copy of t
  **BreakTime(time_t &T, tmElements_t &TM)**  TimeLib.h & time.h compliant version of `breakTime()`.
 
  
- Two variables that are filled when **Query()** returns `true`.
+ Four variables that are filled when **Query()** returns `true`.
  
  **time_t Results:** has the results of the NTPServer response in `time_t` format, ready for use with `localtime`.
 
