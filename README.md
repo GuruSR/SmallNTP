@@ -8,6 +8,7 @@ Original version corrected from Arduino, which is an industry standard copy of t
  **End():**  Stop SmallNTP from continuing in the background, do this if you get a Query() result of true or false.
  
  **time_t MakeTime(tmElements_t TM)** A TimeLib.h & time.h compliant version of `makeTime()`.
+ 
  **BreakTime(time_t &T, tmElements_t &TM)**  TimeLib.h & time.h compliant version of `breakTime()`.
 
  
