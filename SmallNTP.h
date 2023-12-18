@@ -8,6 +8,7 @@
  * Version 1.0, January  2, 2022
  * Version 1.1, January 11, 2022 - Fix internal data.
  * Version 1.2, January 29, 2022 - Added Make & Break Time functions to MATCH TimeLib & time.h by reducing Month and Wday.
+ * Version 1.3, December 17, 2023 - Added 2 seconds onto time collection to account for communication.
  *
  * This library offers async NTP, which returns the seconds from Epoch (1970 and beyond) in 2 variations
  * for use with Watchy watch face code.
