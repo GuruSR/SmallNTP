@@ -1,4 +1,4 @@
-# SmallNTP
+# SmallNTP [![Arduino Lint](https://github.com/GuruSR/SmallNTP/actions/workflows/main.yml/badge.svg)](https://github.com/GuruSR/SmallNTP/actions/workflows/main.yml)
 Original version corrected from Arduino, which is an industry standard copy of the normal NTP function which has been around for decades.  This library offers async NTP, which returns the seconds from Epoch (1970 and beyond) in 2 variations for use with Watchy watch face code.
 
  **Begin(String NTPServer):**  Start a call to the NTPServer asking for the current Epoch time (UTC starting at 1970).
