@@ -5,12 +5,13 @@
  * Original version corrected from Arduino, which is an industry standard copy of the normal NTP function
  * which has been around for decades.
  * 
- * Version 1.0, January  2, 2022
- * Version 1.1, January 11, 2022 - Fix internal data.
- * Version 1.2, January 29, 2022 - Added Make & Break Time functions to MATCH TimeLib & time.h by reducing Month and Wday.
+ * Version 1.0, January   2, 2022
+ * Version 1.1, January  11, 2022 - Fix internal data.
+ * Version 1.2, January  29, 2022 - Added Make & Break Time functions to MATCH TimeLib & time.h by reducing Month and Wday.
  * Version 1.3, December 17, 2023 - Added 2 seconds onto time collection to account for communication.
+ * Version 1.4, July     22, 2024 - Removed the unneeded results.
  *
- * This library offers async NTP, which returns the seconds from Epoch (1970 and beyond) in 2 variations
+ * This library offers async NTP, which returns the seconds from Epoch (1970 and beyond)
  * for use with Watchy watch face code.
  *
  * This library is adapted to work with the Arduino ESP32 and any other project that has similar libraries.
@@ -46,9 +47,7 @@
 class SmallNTP {
     public:
         time_t Results;
-		time_t Results1900;
         tmElements_t tmResults;
-        tmElements_t tmResults1900;
     public:
         SmallNTP();
         void Begin(String NTPServer);
